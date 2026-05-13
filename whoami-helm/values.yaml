@@ -1,0 +1,11 @@
+# Количество копий приложения
+replicaCount: 2
+
+image:
+  repository: traefik/whoami
+  # Если оставить пустым, возьмет версию из Chart.yaml (AppVersion)
+  tag: "latest"
+
+service:
+  type: NodePort
+  port: 80
