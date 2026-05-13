@@ -2,9 +2,9 @@
 replicaCount: 4
 
 image:
-  repository: traefik/whoami
+  repository: registry.gitlab.com/0001k-group/0001k-project
   # Если оставить пустым, возьмет версию из Chart.yaml (AppVersion)
-  tag: "latest"
+  tag: "884a1d33"
 
 service:
   type: NodePort
