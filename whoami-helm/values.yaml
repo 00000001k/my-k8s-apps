@@ -9,3 +9,6 @@ image:
 service:
   type: NodePort
   port: 80
+
+imagePullSecrets:
+  - name: gitlab-registry
