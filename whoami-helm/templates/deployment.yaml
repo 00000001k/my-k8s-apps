@@ -16,6 +16,12 @@ spec:
       labels:
         {{- include "whoami.selectorLabels" . | nindent 8 }}
     spec:
+      # --- ДОБАВЛЕННЫЙ БЛОК ДЛЯ СЕКРЕТОВ ---
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      # -------------------------------------
       containers:
         - name: {{ .Chart.Name }}
           # Собираем строку образа из репозитория и тега
