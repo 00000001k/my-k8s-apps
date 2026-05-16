@@ -17,6 +17,10 @@ spec:
           enabled: true
         grafana:
           enabled: false
+        grafana-pane:
+          sidecar:
+            datasources:
+              default: false
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
